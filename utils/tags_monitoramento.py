@@ -1,4 +1,4 @@
-monitoring_files = {
+MONITORING_FILES = {
     'CPU': 'machine_monitoring-cpu.csv',
     'Disk': 'machine_monitoring-disk.csv',
     'Zumbis': 'machine_monitoring-zombies.csv',
@@ -9,7 +9,7 @@ monitoring_files = {
     'Server response time': 'response_times.csv'
 }
 
-ylabels = {
+YLABELS = {
     'CPU': "(percentage)",
     'Disk': "Disk usage (GB)",
     'Zumbis': "Zumbis processes(qtt)",
