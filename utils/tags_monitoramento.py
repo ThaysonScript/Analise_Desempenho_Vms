@@ -3,9 +3,9 @@ MONITORING_FILES = {
     'Disk': 'machine_monitoring-disk.csv',
     'Zumbis': 'machine_monitoring-zombies.csv',
     'Memory': 'machine_monitoring-mem.csv',
-    'Process - VBoxHeadless': 'monitoring-VBoxHeadless.csv',
-    'Process - VBoxSVC': 'monitoring-VBoxSVC.csv',
-    'Process - VBoxXPCOMIPCD': 'monitoring-VBoxXPCOMIPCD.csv',
+    'Process - VBoxHeadless': 'vbox_monitoring-VBoxHeadless.csv',
+    'Process - VBoxSVC': 'vbox_monitoring-VBoxSVC.csv',
+    'Process - VBoxXPCOMIPCD': 'vbox_monitoring-VBoxXPCOMIPCD.csv',
     'Server response time': 'response_times.csv'
 }
 
