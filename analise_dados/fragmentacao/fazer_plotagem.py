@@ -29,7 +29,7 @@ def fazer_plotagem(data_frame_pivotado):
     plt.legend()
 
     # Salvar a figura como uma imagem
-    plt.savefig('../../images_plot/fragmentation.png')
+    plt.savefig('./images_plot/fragmentation.png')
 
     # Exibir o gráfico
     # plt.show()

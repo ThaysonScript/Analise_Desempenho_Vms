@@ -6,7 +6,7 @@ from analise_dados.fragmentacao.pivotar_data_frame import pivotar_data_frame
 
 
 def fragmentacao_start():
-    caminho_arquivo = '../../data_logs/logs_vbox/logs_com_disco_1gb/fragmentation.csv'
+    caminho_arquivo = './data_logs/logs_vbox/logs/fragmentation.csv'
     novo_data_frame = ler_csv(caminho_arquivo)
 
     novo_data_frame = configurar_index_data_frame(novo_data_frame)
@@ -16,7 +16,3 @@ def fragmentacao_start():
     data_frame_pivotado = pivotar_data_frame(novo_data_frame)
 
     data_frame_pivotado = fazer_plotagem(data_frame_pivotado)
-
-
-if __name__ == '__main__':
-    fragmentacao_start()

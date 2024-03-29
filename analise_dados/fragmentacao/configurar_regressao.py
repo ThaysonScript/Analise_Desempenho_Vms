@@ -14,14 +14,10 @@ def configurar_regressao(data_frame):
 
     r_squared = regression_model.score(X, Y)
 
-    # Adicione uma constante ao x para estimar o intercepto (constante) na regressão
     x_with_const = sm.add_constant(X)
 
-    # Ajuste o modelo de regressão com statsmodels
     regression_model_sm = sm.OLS(Y, x_with_const).fit()
 
-    # Obtenha um resumo completo da regressão
     regression_summary = regression_model_sm.summary()
 
-    # Imprima o resumo
     print(regression_summary)
