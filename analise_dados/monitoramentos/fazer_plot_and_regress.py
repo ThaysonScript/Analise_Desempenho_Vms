@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
-def fazer_plot_regressao(data_frame, nome_arquivo):
+def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):  
   incluirColunaY = True
   tipoYlabel = '(Porcentagem)'
   title = 'Monitoramento de Recursos da CPU'
@@ -50,11 +50,12 @@ def fazer_plot_regressao(data_frame, nome_arquivo):
           ylabel=ylabel,
           style='k'
       )
-
-
+      
       # Adicionar a linha da regressão
       ax.plot(x, Y_pred, color='red')
       
-      plt.savefig(f'./images_plot/{nome_arquivo}.png')
+      plt.savefig(f'{diretorio_plots}/{nome_arquivo}_{col}.png')
+      
+      plt.close()
       
       # plt.show()
