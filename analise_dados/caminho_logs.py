@@ -33,5 +33,5 @@ logs_lxc = {
 }
 
 logs_fragmentacao = {
-    'fragmentation': './data_logs/logs_vbox/logs/fragmentation.csv'
+    'fragmentation': f'{CAMINHO_ABSOLUTO}/fragmentation.csv'
 }
