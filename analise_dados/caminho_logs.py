@@ -1,4 +1,4 @@
-TIPO_VIRTUALIZADOR = '_vbox/logs'
+TIPO_VIRTUALIZADOR = '_kvm/logs'
 
 CAMINHO_ABSOLUTO = f'./data_logs/logs{TIPO_VIRTUALIZADOR}'
 
@@ -20,7 +20,8 @@ logs_vbox = {
 }
 
 logs_kvm = {
-    
+    'kvm_Headless_monitoring': f'{CAMINHO_ABSOLUTO}/kvm_Headless_monitoring.csv',
+    'kvm_libvirtd_service_monitoring': f'{CAMINHO_ABSOLUTO}/kvm_libvirtd_service_monitoring.csv'
 }
 
 logs_xen = {
@@ -29,4 +30,8 @@ logs_xen = {
 
 logs_lxc = {
     
+}
+
+logs_fragmentacao = {
+    'fragmentation': './data_logs/logs_vbox/logs/fragmentation.csv'
 }
