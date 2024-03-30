@@ -1,3 +1,4 @@
+import os
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
@@ -26,9 +27,15 @@ def fazer_plotagem(data_frame_pivotado, diretorio_plots):
     plt.ylabel('Ocorrências do Processo')
     plt.title('Ocorrências do Processo em relação ao Tempo com Linha de Regressão para cada Processo')
     plt.legend()
+    
+    if os.path.exists(f'{diretorio_plots}/fragmentacao'):
+        pass
+    
+    else:
+        os.makedirs(f'{diretorio_plots}/fragmentacao/')
 
     # Salvar a figura como uma imagem
-    plt.savefig(f'{diretorio_plots}/fragmentation.png')
+    plt.savefig(f'{diretorio_plots}/fragmentacao/fragmentation.png')
     plt.close()
 
     # Exibir o gráfico

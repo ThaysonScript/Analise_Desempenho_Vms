@@ -1,3 +1,4 @@
+import os
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
@@ -54,7 +55,13 @@ def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):
       # Adicionar a linha da regressão
       ax.plot(x, Y_pred, color='red')
       
-      plt.savefig(f'{diretorio_plots}/{nome_arquivo}_{col}.png')
+      if os.path.exists(f'{diretorio_plots}/{nome_arquivo}/'):
+        pass
+    
+      else:
+          os.makedirs(f'{diretorio_plots}/{nome_arquivo}/')
+      
+      plt.savefig(f'{diretorio_plots}/{nome_arquivo}/{nome_arquivo}_{col}.png')
       
       plt.close()
       
